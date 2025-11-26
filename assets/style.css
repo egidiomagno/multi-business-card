@@ -117,10 +117,10 @@ body {
 .share-btn:active { transform: scale(0.98); }
 
 .share-btn.whatsapp { background-color: #b39b6a; }
-.share-btn.whatsapp:hover { background-color: #b39b6a; }
+.share-btn.whatsapp:hover { background-color: #b1aa9e; }
 
 .share-btn.email { background-color: #b39b6a; }
-.share-btn.email:hover { background-color: #b39b6a; }
+.share-btn.email:hover { background-color: #b1aa9e; }
 
 .share-btn.save { background-color: #b39b6a; }
-.share-btn.save:hover { background-color: #b39b6a; }
+.share-btn.save:hover { background-color: #b1aa9e; }
