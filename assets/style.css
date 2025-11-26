@@ -31,7 +31,7 @@ body {
 /* Left panel: photo + QR stacked */
 .left-panel {
   width: 100px;
-  background: linear-gradient(135deg, #978150, #d0c38a); /* premium gold gradient */
+  background: linear-gradient(135deg, #978150, #d0c38a); /* gold gradient */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,8 +49,9 @@ body {
 }
 
 .left-panel .qr {
-  width: 60px;
-  height: 60px;
+  width: 80%;      /* proportional size */
+  max-width: 80px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
@@ -89,35 +90,7 @@ body {
   color: #666;
 }
 
-/* Left panel: photo + QR stacked */
-.left-panel {
-  width: 100px;
-  background: linear-gradient(135deg, #978150, #d0c38a); /* premium gold gradient */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 5px;
-}
-
-.left-panel .photo {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #978150;
-  margin-bottom: 10px;
-}
-
-/* QR code fixed relative to card width */
-.left-panel .qr {
-  width: 80%;        /* QR takes 80% of left-panel width */
-  max-width: 80px;   /* desktop max size */
-  height: auto;      /* maintain aspect ratio */
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-}
-
+/* Share button */
 .share-btn {
   margin-top: 12px;
   padding: 8px 15px;
@@ -137,4 +110,42 @@ body {
 
 .share-btn:active {
   transform: scale(0.98);
+}
+
+/* ===============================
+   Mobile Responsive
+================================= */
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column; 
+    width: 95%;            
+    aspect-ratio: auto;    
+  }
+
+  .left-panel {
+    flex-direction: column; 
+    width: 100%;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  .left-panel .photo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .left-panel .qr {
+    width: 60px;
+    height: 60px;
+  }
+
+  .right-panel {
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .name { font-size: 17px; }
+  .title, .organization { font-size: 12px; }
+  .address, .contact { font-size: 10px; }
 }
