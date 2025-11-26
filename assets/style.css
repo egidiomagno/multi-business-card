@@ -88,3 +88,32 @@ body {
   margin-top: 2px;
   color: #666;
 }
+
+/* Left panel: photo + QR stacked */
+.left-panel {
+  width: 100px;
+  background: linear-gradient(135deg, #978150, #d0c38a); /* premium gold gradient */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 5px;
+}
+
+.left-panel .photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #978150;
+  margin-bottom: 10px;
+}
+
+/* QR code fixed relative to card width */
+.left-panel .qr {
+  width: 80%;        /* QR takes 80% of left-panel width */
+  max-width: 80px;   /* desktop max size */
+  height: auto;      /* maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
