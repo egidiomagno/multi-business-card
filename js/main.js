@@ -11,12 +11,11 @@ fetch('data/cards.json')
       if(card) {
         container.innerHTML = `
           <div class="card">
-            <div class="header">
-              <div class="pattern"></div>
+            <div class="left-panel">
               <img src="${card.photo}" alt="Photo" class="photo">
               <img src="${card.qr}" alt="QR Code" class="qr">
             </div>
-            <div class="body">
+            <div class="right-panel">
               <h1 class="name">${card.name}</h1>
               <p class="title">${card.title}</p>
               <p class="organization">${card.organization}</p>
