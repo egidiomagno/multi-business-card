@@ -116,11 +116,11 @@ body {
 .share-btn:hover { background-color: #b39b6a; transform: scale(1.05); }
 .share-btn:active { transform: scale(0.98); }
 
-.share-btn.whatsapp { background-color: #25d366; }
-.share-btn.whatsapp:hover { background-color: #1ebe57; }
+.share-btn.whatsapp { background-color: #b39b6a; }
+.share-btn.whatsapp:hover { background-color: #b39b6a; }
 
-.share-btn.email { background-color: #0072c6; }
-.share-btn.email:hover { background-color: #005ea0; }
+.share-btn.email { background-color: #b39b6a; }
+.share-btn.email:hover { background-color: #b39b6a; }
 
-.share-btn.save { background-color: #ff9800; }
-.share-btn.save:hover { background-color: #e68900; }
+.share-btn.save { background-color: #b39b6a; }
+.share-btn.save:hover { background-color: #b39b6a; }
