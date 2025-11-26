@@ -13,7 +13,7 @@ fetch('data/cards.json')
           <div class="card">
             <div class="header">
               <div class="pattern"></div>
-              <img src="${card.photo}" alt="Photo">
+              <img src="${card.photo}" alt="Photo" class="photo">
               <img src="${card.qr}" alt="QR Code" class="qr">
             </div>
             <div class="body">
