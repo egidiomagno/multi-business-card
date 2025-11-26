@@ -13,23 +13,19 @@ fetch('data/cards.json')
           <div class="card">
             <div class="header">
               <div class="pattern"></div>
-              <img src="${card.photo}" alt="Photo" class="photo">
+              <img src="${card.photo}" alt="Photo">
+              <img src="${card.qr}" alt="QR Code" class="qr">
             </div>
             <div class="body">
-              <div class="text-section">
-                <h1 class="name">${card.name}</h1>
-                <p class="title">${card.title}</p>
-                <p class="organization">${card.organization}</p>
-                <p class="address">${card.address}</p>
-                <p class="contact">
-                  T: ${card.phone} | P: ${card.phone2} <br>
-                  E: ${card.email} <br>
-                  W: ${card.web}
-                </p>
-              </div>
-              <div class="right-panel">
-                <img src="${card.qr}" alt="QR Code" class="qr">
-              </div>
+              <h1 class="name">${card.name}</h1>
+              <p class="title">${card.title}</p>
+              <p class="organization">${card.organization}</p>
+              <p class="address">${card.address}</p>
+              <p class="contact">
+                T: ${card.phone} | P: ${card.phone2} <br>
+                E: ${card.email} <br>
+                W: ${card.web}
+              </p>
             </div>
           </div>
         `;
