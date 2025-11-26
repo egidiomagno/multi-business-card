@@ -17,26 +17,13 @@ fetch('data/cards.json')
             <p>${card.title}</p>
             <p><a href="tel:${card.phone}">📞 ${card.phone}</a></p>
             <p><a href="mailto:${card.email}">📧 Email</a></p>
-            <p><a href="/"><button>Back to All Cards</button></a></p>
           </div>
         `;
       } else {
-        container.innerHTML = "<p>Card not found</p>";
+        container.innerHTML = "<p>Card not found. Please scan a valid QR code.</p>";
       }
     } else {
-      // Show all cards
-      cards.forEach(card => {
-        const cardDiv = document.createElement('div');
-        cardDiv.className = 'card';
-        cardDiv.innerHTML = `
-          <img src="${card.photo}" alt="${card.name}" class="photo">
-          <h2>${card.name}</h2>
-          <p>${card.title}</p>
-          <p><a href="tel:${card.phone}">📞 ${card.phone}</a></p>
-          <p><a href="mailto:${card.email}">📧 Email</a></p>
-          <p><a href="#${card.id}"><img src="${card.qr}" alt="QR Code" style="width:120px;"></a></p>
-        `;
-        container.appendChild(cardDiv);
-      });
+      // No hash, prompt user to scan QR
+      container.innerHTML = "<p>Please scan your QR code to view your business card.</p>";
     }
   });
