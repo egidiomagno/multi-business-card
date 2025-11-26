@@ -2,13 +2,13 @@ fetch('data/cards.json')
   .then(res => res.json())
   .then(cards => {
     const container = document.getElementById('cards-container');
-    const hash = window.location.hash.substring(1); // e.g., #atanasio
+    const hash = window.location.hash.substring(1);
 
     container.innerHTML = '';
 
-    if (hash) {
+    if(hash) {
       const card = cards.find(c => c.id === hash);
-      if (card) {
+      if(card) {
         container.innerHTML = `
           <div class="card">
             <div class="header">
@@ -34,9 +34,9 @@ fetch('data/cards.json')
           </div>
         `;
       } else {
-        container.innerHTML = "<p>Card not found. Please scan a valid QR code.</p>";
+        container.innerHTML = "<p style='text-align:center;'>Card not found. Please scan a valid QR code.</p>";
       }
     } else {
-      container.innerHTML = "<p>Please scan your QR code to view your business card.</p>";
+      container.innerHTML = "<p style='text-align:center;'>Please scan your QR code to view your business card.</p>";
     }
   });
