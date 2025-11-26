@@ -25,6 +25,7 @@ fetch('data/cards.json')
                 E: ${card.email} <br>
                 W: ${card.web}
               </p>
+              <button class="share-btn" onclick="shareCard('${window.location.href}')">Share</button>
             </div>
           </div>
         `;
@@ -35,3 +36,15 @@ fetch('data/cards.json')
       container.innerHTML = "<p style='text-align:center;'>Please scan your QR code to view your business card.</p>";
     }
   });
+
+function shareCard(url) {
+  if (navigator.share) {
+    navigator.share({
+      title: 'My Business Card',
+      text: 'Check out my business card!',
+      url: url,
+    }).catch(console.error);
+  } else {
+    prompt('Copy this link to share:', url);
+  }
+}
