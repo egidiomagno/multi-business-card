@@ -3,11 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Card</title>
+<title>Business Card Admin</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <div id="cards-container"></div>
+
+<div class="admin-panel">
+  <h2>Card Control Panel</h2>
+  <button class="btn" onclick="showAddCardForm()">+ Add Card</button>
+</div>
+
+<div id="cards-container"></div>
+
+<!-- Add/Edit Card Form -->
+<div id="card-form-container" class="form-popup">
+  <div class="form-content">
+    <h3 id="form-title">Add Card</h3>
+    <form id="card-form">
+      <input type="hidden" id="card-id">
+      <label>Name: <input type="text" id="name" required></label>
+      <label>Title: <input type="text" id="title"></label>
+      <label>Organization: <input type="text" id="organization"></label>
+      <label>Address: <input type="text" id="address"></label>
+      <label>Phone: <input type="text" id="phone"></label>
+      <label>Phone2: <input type="text" id="phone2"></label>
+      <label>Email: <input type="email" id="email"></label>
+      <label>Website: <input type="text" id="web"></label>
+      <label>Photo URL: <input type="text" id="photo"></label>
+      <label>QR URL: <input type="text" id="qr"></label>
+      <div class="form-actions">
+        <button type="submit" class="btn">Save</button>
+        <button type="button" class="btn btn-cancel" onclick="hideForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <script src="js/main.js"></script>
 </body>
 </html>
