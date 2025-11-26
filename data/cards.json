@@ -1,20 +1,15 @@
 [
   {
-    "id": "egidio",
-    "name": "Egidio Magno",
-    "title": "IT Engineer",
-    "email": "egidio@example.com",
-    "phone": "+670 1234 5678",
-    "photo": "assets/egidio.jpg",
-    "qr": "assets/qr-egidio.png"
-  },
-  {
-    "id": "maria",
-    "name": "Maria Silva",
-    "title": "Finance Manager",
-    "email": "maria@example.com",
-    "phone": "+670 9876 5432",
-    "photo": "assets/maria.jpg",
-    "qr": "assets/qr-maria.png"
+    "id": "atanasio",
+    "name": "Atanásio Pereira Xavier",
+    "title": "Chief of Governor's Office",
+    "organization": "BANCO CENTRAL DE TIMOR-LESTE",
+    "address": "Avenida Xavier do Amaral nº 09, P.O Box 59-Dili, Timor-Leste",
+    "phone": "+670 3313718",
+    "phone2": "+670 77304033",
+    "email": "atanasio.xavier@bancocentral.tl",
+    "web": "www.bancocentral.tl",
+    "photo": "assets/photo.png",
+    "qr": "assets/qr-atanasio.png"
   }
 ]
