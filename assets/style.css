@@ -89,48 +89,40 @@ body {
 }
 
 /* ===============================
-   Mobile: Keep same card size
+   Mobile: scale card to fit screen
 ================================= */
 @media (max-width: 400px) {
   .card {
-    width: 360px;   /* keep desktop width */
-    height: 205px;  /* keep desktop height */
-    flex-direction: column; /* stack left + right vertically */
+    width: 90%;          /* scale down to fit viewport */
+    height: auto;        /* auto height to maintain content */
+    flex-direction: column;
   }
 
   .left-panel {
-    flex-direction: column; /* photo above QR */
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    flex-direction: row;  /* photo + QR side by side on small screens */
+    justify-content: center;
     padding: 10px 0;
   }
 
   .left-panel .photo {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+    margin-right: 10px;
   }
 
   .left-panel .qr {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .right-panel {
-    padding: 10px 15px;
-    text-align: center; /* center text */
+    padding: 10px 12px;
+    text-align: center;
   }
 
-  .name {
-    font-size: 17px;
-  }
-
-  .title, .organization {
-    font-size: 12px;
-  }
-
-  .address, .contact {
-    font-size: 10px;
-  }
+  .name { font-size: 16px; }
+  .title, .organization { font-size: 12px; }
+  .address, .contact { font-size: 10px; }
 }
