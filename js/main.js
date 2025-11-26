@@ -6,12 +6,15 @@ fetch('data/cards.json')
 
     container.innerHTML = '';
 
-    if(hash) {
+    if (hash) {
       const card = cards.find(c => c.id === hash);
-      if(card) {
+      if (card) {
         container.innerHTML = `
           <div class="card">
-            <div class="header"><div class="pattern"></div></div>
+            <div class="header">
+              <div class="pattern"></div>
+              <img src="${card.photo}" alt="Photo" class="photo" style="width:100px; height:100px; border-radius:50%;">
+            </div>
             <div class="body">
               <h1 class="name">${card.name}</h1>
               <p class="title">${card.title}</p>
@@ -22,6 +25,7 @@ fetch('data/cards.json')
                 E: ${card.email} <br>
                 W: ${card.web}
               </p>
+              <img src="${card.qr}" alt="QR Code" class="qr" style="width:120px; height:120px;">
             </div>
           </div>
         `;
