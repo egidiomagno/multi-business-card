@@ -8,8 +8,8 @@ body {
 }
 
 .card {
-  width: 660px;
-  height: 305px; /* scaled to match 88.9 x 50.9 mm */
+  width: 360px;
+  height: 205px; /* scaled to match 88.9 x 50.9 mm */
   border-radius: 10px;
   background-color: #fff;
   overflow: hidden;
