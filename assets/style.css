@@ -8,19 +8,19 @@ body {
 }
 
 .card {
-  width: 360px; /* scaled to fit screen while keeping aspect ratio of 88.9 x 50.9 mm */
-  border-radius: 10px;
+  width: 360px;  /* scaled to match 88.9mm width */
+  height: 205px; /* scaled to match 50.9mm height */
+  border-radius: 12px;
   background-color: #fff;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
   display: flex;
-  flex-direction: row; /* photo + text side by side */
-  text-align: left;
+  flex-direction: row; /* photo + text + QR */
 }
 
 .header {
+  width: 90px;
   background-color: #b08c3f; /* gold color */
-  width: 100px; /* reserved for photo */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,51 +31,45 @@ body {
   background-image: url('../assets/pattern.png');
   background-size: cover;
   height: 100%;
+  width: 100%;
 }
 
 .header .photo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
-  top: 0;
-  left: 10px;
 }
 
 .body {
-  padding: 15px;
   flex: 1;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .name {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: #b08c3f;
 }
 
-.title {
+.title, .organization {
   font-size: 12px;
-  margin-top: 5px;
-}
-
-.organization {
+  margin-top: 4px;
   font-weight: bold;
-  margin-top: 10px;
-  font-size: 12px;
 }
 
 .address, .contact {
   font-size: 10px;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .qr {
   width: 70px;
   height: 70px;
   align-self: flex-end;
-  margin-top: 10px;
+  margin-top: 5px;
 }
