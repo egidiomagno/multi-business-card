@@ -1,7 +1,9 @@
-/* Global */
+/* =========================
+   Global Styles
+========================= */
 body {
   font-family: 'Inter', 'Roboto', sans-serif;
-  background: #f0f2f5;
+  background: #f5f6fa;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -11,30 +13,35 @@ body {
   color: #333;
 }
 
-/* Card */
+/* =========================
+   Card Container
+========================= */
 .card {
-  width: 360px; /* standard business card width scaled */
-  background: #fff;
+  width: 360px;      /* ~88.9mm scaled for screen */
+  height: 205px;     /* ~50.8mm scaled for screen */
+  background: #ffffff;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
-  transition: 0.3s;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.03);
 }
 
-/* Header - Photo + QR stacked vertically */
+/* =========================
+   Header: Photo + QR
+========================= */
 .header {
   width: 100%;
   background-color: #b08c3f;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 15px 0;
   position: relative;
 }
@@ -45,17 +52,18 @@ body {
   height: 100%;
   background-image: url('../assets/pattern.png');
   background-size: cover;
+  background-repeat: no-repeat;
   z-index: 1;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 
 .header img {
   z-index: 2;
   border: 2px solid #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-/* Photo */
+/* Profile Photo */
 .header .photo {
   width: 70px;
   height: 70px;
@@ -64,48 +72,59 @@ body {
   margin-bottom: 10px;
 }
 
-/* QR Code under photo */
+/* QR Code below photo */
 .header .qr {
   width: 60px;
   height: 60px;
   border-radius: 8px;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* Body / Text */
+/* =========================
+   Body Text
+========================= */
 .body {
-  padding: 15px;
+  flex: 1;
+  padding: 15px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .name {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: #b08c3f;
 }
 
 .title {
-  font-size: 12px;
-  margin-top: 4px;
+  font-size: 13px;
   font-weight: 500;
+  margin-top: 3px;
+  color: #555;
 }
 
 .organization {
   font-weight: 600;
   margin-top: 6px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .address, .contact {
-  font-size: 10px;
+  font-size: 11px;
   margin-top: 4px;
+  color: #555;
 }
 
-/* Mobile Responsive */
+/* =========================
+   Responsive Mobile
+========================= */
 @media (max-width: 400px) {
   .card {
     width: 100%;
+    height: auto;
   }
 
   .header .photo {
@@ -119,7 +138,7 @@ body {
   }
 
   .body {
-    padding: 10px;
+    padding: 10px 12px;
   }
 
   .name {
@@ -127,10 +146,10 @@ body {
   }
 
   .title, .organization {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .address, .contact {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
